@@ -11,5 +11,7 @@ This is a simple Temperature Converter program written in Dart. It allows users 
 🛠 Example Usage:
 
 Enter temperature: 100
+
 You want to convert it to Celsius or Fahrenheit? C/F: C
+
 100°F = 37.78°C
