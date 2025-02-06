@@ -10,8 +10,6 @@ _______________________
 ________________________
 🛠 Example Usage:
 
-Enter temperature: 100
-
-You want to convert it to Celsius or Fahrenheit? C/F: C
-
-100°F = 37.78°C
+- Enter temperature: 100
+- You want to convert it to Celsius or Fahrenheit? C/F: C
+- 100°F = 37.78°C
