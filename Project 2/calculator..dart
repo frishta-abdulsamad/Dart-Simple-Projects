@@ -36,31 +36,38 @@ void main() {
     }
   }
 
-  stdout.write("Enter an operator '(+, -, *, or /)': ");
-  var operator = stdin.readLineSync()!;
+  String? operator;
+  while (true) {
+    stdout.write("Enter an operator '(+, -, *, or /)': ");
+    operator = stdin.readLineSync();
+
+    if (['+', '-', '*', '/'].contains(operator)) {
+      break;
+    } else {
+      print("Error: Invalid operator. Please enter one of (+, -, *, /).");
+    }
+  }
+
   num result;
   switch (operator) {
-      case ('+'):
-        result = x + y;
-        print("$x + $y = $result");
-        break;
-      case ('-'):
-        result = x - y;
-        print("$x - $y = $result");
-        break;
-      case ('*'):
-        result = x * y;
-        print("$x * $y = $result");
-        break;
-      case ('/'):
-        if (y != 0) {
-          result = x / y;
-          print("$x / $y = $result");
-        } else {
-          print("Error: Devision by zero.");
-        }
-        break;
-      default:
-        print("Invalid Operator");
-    }
+    case ('+'):
+      result = x + y;
+      print("$x + $y = $result");
+      break;
+    case ('-'):
+      result = x - y;
+      print("$x - $y = $result");
+      break;
+    case ('*'):
+      result = x * y;
+      print("$x * $y = $result");
+      break;
+    case ('/'):
+      if (y != 0) {
+        result = x / y;
+        print("$x / $y = $result");
+      } else {
+        print("Error: Devision by zero.");
+      }
+  }
 }
