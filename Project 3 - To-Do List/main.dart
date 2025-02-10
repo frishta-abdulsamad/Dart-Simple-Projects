@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   List<String> tasks = [];
-  var file = File("tasks.txt");
+  var file = File("Project 3 - To-Do List/tasks.txt");
 
   file.writeAsStringSync(''); 
 
