@@ -10,10 +10,22 @@ void main() {
     stdout.write(
       "I'm thinking of a number between 1 and 100. Can you guess what it is? ",
     );
-    guess = int.parse(stdin.readLineSync()!);
 
-    if (guess < 1 || guess > 100) {
-      print("the number must be between 1 to 100.");
+    try {
+      String? input = stdin.readLineSync();
+      if (input == null) {
+        print("Input can't be null. Try again");
+        continue;
+      }
+
+      guess = int.parse(input);
+
+      if (guess < 1 || guess > 100) {
+        print("The number must be between 1 to 100");
+        continue;
+      }
+    } catch (e) {
+      print("Invalid input! Please enter a valid number between 1 and 100.");
       continue;
     }
 
@@ -28,13 +40,14 @@ void main() {
       guessCounter++;
       print("You tried ${guessCounter} times");
 
-      stdout.write("Do you want to do the game again? Y/N");
+      stdout.write("Do you want to play again? Y/N");
       String? again = stdin.readLineSync();
       if (again?.toUpperCase() == "Y") {
         guessCounter = 0;
         number = r.nextInt(100) + 1;
         continue;
       } else {
+        print("Thanks for playing! 👋");
         break;
       }
     }
