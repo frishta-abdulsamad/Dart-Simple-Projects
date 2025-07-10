@@ -33,5 +33,5 @@ Users can play the game repeatedly.
 3. Run the following command in your terminal:
 
 ```bash
-dart run guessing_game.dart
+dart run guessing_number.dart
 
